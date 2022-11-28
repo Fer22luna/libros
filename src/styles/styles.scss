@@ -22,50 +22,20 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   height: 100%;
+  max-width: 250vh ;
   scroll-behavior: smooth;
 }
 
-body {
-  background: white;
-  height: 100%;
-
+h2{
+  font-size: 20px;
+  margin: 30px;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 span {
   display: block;
   width: max-content;
-}
-
-
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
-  width: 95%;
-  max-width: 2000px;
-  height: 130px;
-  margin: 0 auto;
-
-  &__logo {
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    height: auto;
-  }
-
-  &__nav {
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: 20px;
-
-    &-item {
-      color: #4C3575;
-      font-weight: lighter;
-    }
-  }
-
 }
 
 .grid {
@@ -100,99 +70,6 @@ span {
 }
 
 
-
-
-.button {
-  background: #4C3575;
-  color: white;
-  height: max-content;
-  width: max-content;
-  font-size: 15px;
-  padding: 5px 25px;
-  border-radius: 3px;
-  border: 1px solid #371B58;
-
-
-
-  &:hover {
-    color: white;
-    background: #7858A6;
-    border: 1px solid #371B58;
-  }
-}
-
-
-
-
-
-.card {
-  height: 100%;
-  width: 100%;
-  justify-content: space-around;
-  border: 1px solid transparent;
-  cursor: pointer;
-
-  * {
-    cursor: pointer;
-  }
-
-  &__content {
-    padding: 5px;
-    display: grid;
-    grid-auto-flow: row;
-    grid-gap: 6px;
-    margin-bottom: 20px;
-  }
-
-  &__top {
-    position: relative;
-
-    img {
-      width: 100%;
-      height: auto;
-      max-height: 450px;
-    }
-  }
-
-  &__name {
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  &__precio {
-    font-size: 18px;
-  }
-
-  &__category {
-    font-size: 14px;
-    color: #919192;
-  }
-
-  &__stock {
-    color: black;
-  }
-
-
-  &:hover {
-    border-color: black;
-
-  }
-}
-
-.footer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background: #4C3575;
-  padding: 20px 40px;
-
-  &__item {
-    font-size: 14px;
-    color: white;
-  }
-}
-
 .individual {
   justify-content: center;
   margin-left: 50px;
@@ -213,10 +90,10 @@ span {
 
   &__categoria {
     font-size: 25px;
-    color:#CA82FF;
+    color: #CA82FF;
   }
 
-  &__precio{
+  &__precio {
     font-size: 40px;
     color: #371B58;
     padding-bottom: 40px;
@@ -236,3 +113,55 @@ span {
   justify-content: center;
   align-items: center;
 }
+
+
+
+
+
+////////////////////////////////////////////////////// CART  ////////////////////////////////////
+
+.OrderButton {
+  background: #4C3575;
+  color: white;
+  height: max-content;
+  width: auto;
+  font-size: 15px;
+  padding: 10px 25px;
+  border-radius: 3px;
+  border: 1px solid #371B58;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  position: absolute;
+  right: 45%;
+
+
+
+  &:hover {
+    color: white;
+    background: #371B58;
+    opacity: 0.9;
+    border: 1px solid #371B58;
+  }
+}
+
+.CartImg {
+  height: 80px;
+  width: auto;
+}
+
+.contentCart {
+  width: 100%;
+  max-width: 110vh;
+  margin: 0 auto;
+  padding: 20px 0;
+  height:220vh ;
+ 
+  input {
+    border: 1px solid #4C3575;
+    height: 40px;
+  }
+}
+
+/////////////////////////////////// CATEGORY
+
+

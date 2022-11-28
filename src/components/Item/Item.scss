@@ -1,0 +1,87 @@
+
+  .card {
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    cursor: pointer;
+  
+  
+    &__content {
+      padding: 5px;
+      display: grid;
+      grid-auto-flow: row;
+      grid-gap: 6px;
+      margin-bottom: 20px;
+    }
+  
+    &__top {
+  
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+      }
+    }
+  
+    &__nombre {
+      font-size: 17px;
+      font-weight: 500;
+      padding-bottom: 8px;
+    }
+  
+    &__autor {
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    &__precio {
+      font-size: 18px;
+    }
+
+    &__category {
+      font-size: 14px;
+      color: #919192;
+    }
+  
+    &__stock {
+      color: black;
+    }
+  
+  }
+
+  .AddButton {
+    background: #4C3575;
+    color: white;
+    height: max-content;
+    width: 100%;
+    font-size: 15px;
+    padding: 5px 25px;
+    border-radius: 3px;
+    border: 1px solid #371B58;
+
+    &:hover {
+      color: white;
+      background: #371B58;
+      opacity: 0.9;
+      border: 1px solid #371B58;
+    }
+  }
+  
+
+  .DetailButton {
+    background: white;
+    color: #4C3575;
+    height: max-content;
+    width: 100%;
+    font-size: 15px;
+    padding: 5px 25px;
+    border-radius: 3px;
+    border: 1px solid #371B58;
+
+    &:hover {
+      color: white;
+      background: #4C3575;
+      opacity: 0.9;
+      border: 1px solid #371B58;
+    }
+  }

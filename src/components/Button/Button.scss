@@ -1,0 +1,19 @@
+
+.AllButtons{
+    background: #4C3575;
+    color: white;
+    height: max-content;
+    width: 100%;
+    font-size: 15px;
+    padding: 5px 25px;
+    border-radius: 3px;
+    border: 1px solid #371B58;
+
+    &:hover {
+      color: white;
+      background: #371B58;
+      opacity: 0.9;
+      border: 1px solid #371B58;
+    }
+
+}

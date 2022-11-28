@@ -1,14 +1,26 @@
-import AppContainer from "../components/ItemContainer";
-import { UserLayout } from "../components/UserLayout";
+import { useEffect, useState } from "react";
+import { getProducts, cargarData } from "../api/products";
+import { ItemContainer } from "../components/ItemContainer";
+
 
 export const Home = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setProducts([]);
+    setLoading(true);
+    getProducts()
+      .then((items) => {
+        setProducts(items);
+        setLoading(false);
+      })
+      .catch((e) => console.log(e));
+  }, []);
+
   return (
-    <>
-
       <main className="content">
-        <AppContainer />
+        <ItemContainer products={products} loading={loading} />
       </main>
-
-    </>
   );
 };

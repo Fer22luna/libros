@@ -1,11 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
-import CartWidget from "./CartWidget";
+import "./Navbar.scss";
+import { useCartContext } from "../../context/cartContext";
+import { CartWidget } from "../../components/CartWidget"
 
 const links = ["Ingles", "Autoayuda", "Ciencia ficcion"];
 
 export const Navbar = () => {
+  const { cart, getCartQty } = useCartContext();
+  console.log({ cart });
   return (
-    <header className="header">
+<header className="header">
       <Link to="/">
         <img
           src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtARl66StdwcO8_oAiMjCkJ2JVgl3jaDSEnw&usqp=CAU"}
@@ -29,12 +33,10 @@ export const Navbar = () => {
           );
         })}
       </div>
-      <div>
-        <Link to="/cart">
-          <CartWidget/>
-        </Link>
-      </div>
+      <Link to="/cart" className="navbar__cart">
+      <CartWidget/>{" "}
+        <span className="navbar__cart-qty">{getCartQty()}</span>
+      </Link>
     </header>
   );
 };
-
